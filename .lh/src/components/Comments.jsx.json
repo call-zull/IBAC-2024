@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/components/Comments.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1730154900990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1730154916121,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n import React from 'react'\r\n+import Safe from \"react-safe\"\r\n \r\n+\r\n function Comments() {\r\n   return (\r\n     <div>\r\n       <div id=\"disqus_thread\"></div>\r\n"
+                },
+                {
+                    "date": 1730155536190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import React from 'react'\r\n import Safe from \"react-safe\"\r\n+import { DiscussionEmbed } from \"disqus-react\";\r\n \r\n \r\n function Comments() {\r\n   return (\r\n"
+                },
+                {
+                    "date": 1730155713164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import React from 'react'\r\n-import Safe from \"react-safe\"\r\n import { DiscussionEmbed } from \"disqus-react\";\r\n \r\n \r\n function Comments() {\r\n@@ -20,5 +19,12 @@\n     </div>\r\n   )\r\n }\r\n \r\n+const disqusShortname = \"user-id-disqus-kita\";\r\n+const disqusConfig = {\r\n+  url: `https://www.urlblog.com${this}`,\r\n+  identifier: `${this}`,\r\n+  title: PostFullTitle,\r\n+};\r\n+\r\n export default Comments\r\n"
+                },
+                {
+                    "date": 1730155722252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     </div>\r\n   )\r\n }\r\n \r\n-const disqusShortname = \"user-id-disqus-kita\";\r\n+const disqusShortname = \"web-design-6\";\r\n const disqusConfig = {\r\n   url: `https://www.urlblog.com${this}`,\r\n   identifier: `${this}`,\r\n   title: PostFullTitle,\r\n"
+                },
+                {
+                    "date": 1730155744960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n }\r\n \r\n const disqusShortname = \"web-design-6\";\r\n const disqusConfig = {\r\n-  url: `https://www.urlblog.com${this}`,\r\n+  url: `http://localhost:5173${this}`,\r\n   identifier: `${this}`,\r\n   title: PostFullTitle,\r\n };\r\n \r\n"
+                },
+                {
+                    "date": 1730164701851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,30 +1,27 @@\n import React from 'react'\r\n import { DiscussionEmbed } from \"disqus-react\";\r\n \r\n \r\n-function Comments() {\r\n-  return (\r\n-    <div>\r\n-      <div id=\"disqus_thread\"></div>\r\n-      <Safe.Script>\r\n-        {\r\n-          (function() { // DON'T EDIT BELOW THIS LINE\r\n-            var d = document, s = d.createElement('script');\r\n-            s.src = 'https://web-design-6.disqus.com/embed.js';\r\n-            s.setAttribute('data-timestamp', +new Date());\r\n-            (d.head || d.body).appendChild(s);\r\n-            })()\r\n-        }\r\n-      </Safe.Script>\r\n-    </div>\r\n+const article = {\r\n+  url: \"http://localhost:3000\",\r\n+  id: \"article-1\",\r\n+  title: \"Judul Artikel Pertama\",\r\n+};\r\n+\r\n+return (\r\n+  <div>\r\n+    <h1>Selamat Datang di Aplikasi</h1>\r\n+    <DiscussionEmbed\r\n+      shortname=\"ibac-2\"\r\n+      config={{\r\n+        url: article.url,\r\n+        identifier: article.id,\r\n+        title: article.title,\r\n+        language: \"en\",\r\n+      }}\r\n+    />\r\n+\r\n+  </div>\r\n   )\r\n-}\r\n \r\n-const disqusShortname = \"web-design-6\";\r\n-const disqusConfig = {\r\n-  url: `http://localhost:5173${this}`,\r\n-  identifier: `${this}`,\r\n-  title: PostFullTitle,\r\n-};\r\n-\r\n export default Comments\r\n"
+                },
+                {
+                    "date": 1730164709615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react'\r\n import { DiscussionEmbed } from \"disqus-react\";\r\n \r\n \r\n-const article = {\r\n+const Comments = {\r\n   url: \"http://localhost:3000\",\r\n   id: \"article-1\",\r\n   title: \"Judul Artikel Pertama\",\r\n };\r\n"
+                },
+                {
+                    "date": 1730164771693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,8 @@\n const Comments = {\r\n   url: \"http://localhost:3000\",\r\n   id: \"article-1\",\r\n   title: \"Judul Artikel Pertama\",\r\n-};\r\n-\r\n return (\r\n   <div>\r\n     <h1>Selamat Datang di Aplikasi</h1>\r\n     <DiscussionEmbed\r\n@@ -23,5 +21,7 @@\n \r\n   </div>\r\n   )\r\n \r\n+};\r\n+\r\n export default Comments\r\n"
+                },
+                {
+                    "date": 1730164809648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,27 +1,35 @@\n import React from 'react'\r\n import { DiscussionEmbed } from \"disqus-react\";\r\n \r\n+import React from 'react'\r\n \r\n-const Comments = {\r\n-  url: \"http://localhost:3000\",\r\n-  id: \"article-1\",\r\n-  title: \"Judul Artikel Pertama\",\r\n-return (\r\n-  <div>\r\n-    <h1>Selamat Datang di Aplikasi</h1>\r\n-    <DiscussionEmbed\r\n-      shortname=\"ibac-2\"\r\n-      config={{\r\n-        url: article.url,\r\n-        identifier: article.id,\r\n-        title: article.title,\r\n-        language: \"en\",\r\n-      }}\r\n-    />\r\n+function Comments() {\r\n+  const Comments = {\r\n+    url: \"http://localhost:3000\",\r\n+    id: \"article-1\",\r\n+    title: \"Judul Artikel Pertama\",\r\n+  return (\r\n+    <div>\r\n+      <h1>Selamat Datang di Aplikasi</h1>\r\n+      <DiscussionEmbed\r\n+        shortname=\"ibac-2\"\r\n+        config={{\r\n+          url: article.url,\r\n+          identifier: article.id,\r\n+          title: article.title,\r\n+          language: \"en\",\r\n+        }}\r\n+      />\r\n+  \r\n+    </div>\r\n+    )\r\n+}\r\n \r\n-  </div>\r\n-  )\r\n+export default Comments\r\n \r\n+\r\n+\r\n+\r\n };\r\n \r\n export default Comments\r\n"
+                },
+                {
+                    "date": 1730164844058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n-import React from 'react'\r\n-import { DiscussionEmbed } from \"disqus-react\";\r\n+import React from 'react';\r\n+import { DiscussionEmbed } from 'disqus-react';\r\n \r\n-import React from 'react'\r\n+function Comments() {\r\n+  const article = {\r\n+    url: 'http://localhost:3000',\r\n+    id: 'article-1',\r\n+    title: 'Judul Artikel Pertama',\r\n+  };\r\n \r\n-function Comments() {\r\n-  const Comments = {\r\n-    url: \"http://localhost:3000\",\r\n-    id: \"article-1\",\r\n-    title: \"Judul Artikel Pertama\",\r\n   return (\r\n     <div>\r\n       <h1>Selamat Datang di Aplikasi</h1>\r\n       <DiscussionEmbed\r\n@@ -16,20 +16,12 @@\n         config={{\r\n           url: article.url,\r\n           identifier: article.id,\r\n           title: article.title,\r\n-          language: \"en\",\r\n+          language: 'en',\r\n         }}\r\n       />\r\n-  \r\n     </div>\r\n-    )\r\n+  );\r\n }\r\n \r\n-export default Comments\r\n-\r\n-\r\n-\r\n-\r\n-};\r\n-\r\n-export default Comments\r\n+export default Comments;\r\n"
+                },
+                {
+                    "date": 1730172921304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n   };\r\n \r\n   return (\r\n     <div>\r\n-      <h1>Selamat Datang di Aplikasi</h1>\r\n       <DiscussionEmbed\r\n         shortname=\"ibac-2\"\r\n         config={{\r\n           url: article.url,\r\n"
+                }
+            ],
+            "date": 1730154900990,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nfunction Comments() {\r\n  return (\r\n    <div>\r\n      <div id=\"disqus_thread\"></div>\r\n      <Safe.Script>\r\n        {\r\n          (function() { // DON'T EDIT BELOW THIS LINE\r\n            var d = document, s = d.createElement('script');\r\n            s.src = 'https://web-design-6.disqus.com/embed.js';\r\n            s.setAttribute('data-timestamp', +new Date());\r\n            (d.head || d.body).appendChild(s);\r\n            })()\r\n        }\r\n      </Safe.Script>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default Comments\r\n"
+        }
+    ]
+}
