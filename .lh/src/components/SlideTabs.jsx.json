@@ -1,0 +1,270 @@
+{
+    "sourceFile": "src/components/SlideTabs.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 63,
+            "patches": [
+                {
+                    "date": 1730096628802,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1730096639067,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const SlideTabsExample = () => {\r\n     return (\r\n         <div className='grid h-screen place-content-center bg-neutral-100'>\r\n-\r\n+            <SlideTabs></SlideTabs>\r\n         </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1730096646286,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const SlideTabsExample = () => {\r\n     return (\r\n         <div className='grid h-screen place-content-center bg-neutral-100'>\r\n-            <SlideTabs></SlideTabs>\r\n+            <SlideTabs />\r\n         </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1730096912847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,17 @@\n }\r\n \r\n const SlideTabs = () => {\r\n   return (\r\n-    <div>SlideTabs</div>\r\n+    <ul>\r\n+\r\n+    </ul>\r\n   )\r\n }\r\n \r\n+conts Tab = () => {\r\n+    return (\r\n+        <li></li>\r\n+    )\r\n+}\r\n+\r\n export default SlideTabs\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1730096921685,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     </ul>\r\n   )\r\n }\r\n \r\n-conts Tab = () => {\r\n+conts Tab = ({children}) => {\r\n     return (\r\n         <li></li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730096969633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,12 @@\n \r\n const SlideTabs = () => {\r\n   return (\r\n     <ul>\r\n-\r\n+        <Tab>Home</Tab>\r\n+        <Tab>Content</Tab>\r\n+        <Tab>About</Tab>\r\n+        <Tab>Contact</Tab>\r\n     </ul>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1730097026224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n }\r\n \r\n const SlideTabs = () => {\r\n   return (\r\n-    <ul>\r\n+    <ul className='relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1'>\r\n         <Tab>Home</Tab>\r\n         <Tab>Content</Tab>\r\n         <Tab>About</Tab>\r\n         <Tab>Contact</Tab>\r\n"
+                },
+                {
+                    "date": 1730097043980,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,6 +23,4 @@\n     return (\r\n         <li></li>\r\n     )\r\n }\r\n-\r\n-export default SlideTabs\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1730097050765,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     </ul>\r\n   )\r\n }\r\n \r\n-conts Tab = ({children}) => {\r\n+const Tab = ({children}) => {\r\n     return (\r\n         <li></li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730097309660,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,7 @@\n }\r\n \r\n const Tab = ({children}) => {\r\n     return (\r\n-        <li></li>\r\n+        <li className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'></li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730097326035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,9 @@\n }\r\n \r\n const Tab = ({children}) => {\r\n     return (\r\n-        <li className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'></li>\r\n+        <li className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'>\r\n+            {children}\r\n+        </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730097525877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,4 +25,10 @@\n             {children}\r\n         </li>\r\n     )\r\n }\r\n+\r\n+const Cursor = () => {\r\n+    return (\r\n+        <div className='absolute top-0 left-0 h-1.5 w-1.5 rounded-full bg-black'></div>\r\n+    )\r\n+}\r\n"
+                },
+                {
+                    "date": 1730097593215,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,7 +28,9 @@\n }\r\n \r\n const Cursor = () => {\r\n     return (\r\n-        <div className='absolute top-0 left-0 h-1.5 w-1.5 rounded-full bg-black'></div>\r\n+      <li className='absolute z-0 h-7 rounded-full bg-black'>\r\n+\r\n+      </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730097600310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,9 @@\n         <Tab>Home</Tab>\r\n         <Tab>Content</Tab>\r\n         <Tab>About</Tab>\r\n         <Tab>Contact</Tab>\r\n+        <Cursor />\r\n     </ul>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1730097838232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,9 @@\n }\r\n \r\n const Cursor = () => {\r\n     return (\r\n-      <li className='absolute z-0 h-7 rounded-full bg-black'>\r\n+      <li className='absolute z-0 h-7 w-36 rounded-full bg-black'>\r\n \r\n       </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730098000494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,14 @@\n     )\r\n }\r\n \r\n const SlideTabs = () => {\r\n+    const [position, setPosition] = useState({\r\n+        left: 0,\r\n+        width: 0,\r\n+        opacity: 0\r\n+    })\r\n+\r\n   return (\r\n     <ul className='relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1'>\r\n         <Tab>Home</Tab>\r\n         <Tab>Content</Tab>\r\n"
+                },
+                {
+                    "date": 1730098014827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,11 @@\n }\r\n \r\n const SlideTabs = () => {\r\n     const [position, setPosition] = useState({\r\n-        left: 0,\r\n-        width: 0,\r\n-        opacity: 0\r\n+        left: 60,\r\n+        width: 150,\r\n+        opacity: 1,\r\n     })\r\n \r\n   return (\r\n     <ul className='relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1'>\r\n"
+                },
+                {
+                    "date": 1730098022623,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n     const [position, setPosition] = useState({\r\n         left: 60,\r\n         width: 150,\r\n         opacity: 1,\r\n-    })\r\n+    });\r\n \r\n   return (\r\n     <ul className='relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1'>\r\n         <Tab>Home</Tab>\r\n"
+                },
+                {
+                    "date": 1730098063689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n         <Tab>Home</Tab>\r\n         <Tab>Content</Tab>\r\n         <Tab>About</Tab>\r\n         <Tab>Contact</Tab>\r\n-        <Cursor />\r\n+        <Cursor position={position}/>\r\n     </ul>\r\n   )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1730098079020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         </li>\r\n     )\r\n }\r\n \r\n-const Cursor = () => {\r\n+const Cursor = ({position}) => {\r\n     return (\r\n       <li className='absolute z-0 h-7 w-36 rounded-full bg-black'>\r\n \r\n       </li>\r\n"
+                },
+                {
+                    "date": 1730098095153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,9 +35,7 @@\n }\r\n \r\n const Cursor = ({position}) => {\r\n     return (\r\n-      <li className='absolute z-0 h-7 w-36 rounded-full bg-black'>\r\n-\r\n-      </li>\r\n+      <li className='absolute z-0 h-7 w-36 rounded-full bg-black'/>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730098145201,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import React from 'react'\r\n+import { motion } from \"framer-motion\"\r\n \r\n export const SlideTabsExample = () => {\r\n     return (\r\n         <div className='grid h-screen place-content-center bg-neutral-100'>\r\n"
+                },
+                {
+                    "date": 1730098185697,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,7 +36,7 @@\n }\r\n \r\n const Cursor = ({position}) => {\r\n     return (\r\n-      <li className='absolute z-0 h-7 w-36 rounded-full bg-black'/>\r\n+      <motion.li animate={position} className='absolute z-0 h-7 w-36 rounded-full bg-black'/>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730098284773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,11 +10,11 @@\n }\r\n \r\n const SlideTabs = () => {\r\n     const [position, setPosition] = useState({\r\n-        left: 60,\r\n-        width: 150,\r\n-        opacity: 1,\r\n+        left: 0,\r\n+        width: 0,\r\n+        opacity: 0,\r\n     });\r\n \r\n   return (\r\n     <ul className='relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1'>\r\n"
+                },
+                {
+                    "date": 1730098353770,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,12 +17,12 @@\n     });\r\n \r\n   return (\r\n     <ul className='relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1'>\r\n-        <Tab>Home</Tab>\r\n-        <Tab>Content</Tab>\r\n-        <Tab>About</Tab>\r\n-        <Tab>Contact</Tab>\r\n+        <Tab setPosition={setPosition}>Home</Tab>\r\n+        <Tab setPosition={setPosition}>Content</Tab>\r\n+        <Tab setPosition={setPosition}>About</Tab>\r\n+        <Tab setPosition={setPosition}>Contact</Tab>\r\n         <Cursor position={position}/>\r\n     </ul>\r\n   )\r\n }\r\n"
+                },
+                {
+                    "date": 1730098363683,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n     </ul>\r\n   )\r\n }\r\n \r\n-const Tab = ({children}) => {\r\n+const Tab = ({children, setPosition}) => {\r\n     return (\r\n         <li className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'>\r\n             {children}\r\n         </li>\r\n"
+                },
+                {
+                    "date": 1730098383360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,7 +36,7 @@\n }\r\n \r\n const Cursor = ({position}) => {\r\n     return (\r\n-      <motion.li animate={position} className='absolute z-0 h-7 w-36 rounded-full bg-black'/>\r\n+      <motion.li animate={position} className='absolute z-0 h-7 rounded-full bg-black'/>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730098411851,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React from 'react'\r\n+import React, { useRef } from 'react'\r\n import { motion } from \"framer-motion\"\r\n \r\n export const SlideTabsExample = () => {\r\n     return (\r\n@@ -27,8 +27,9 @@\n   )\r\n }\r\n \r\n const Tab = ({children, setPosition}) => {\r\n+    const ref = useRef(null);\r\n     return (\r\n         <li className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'>\r\n             {children}\r\n         </li>\r\n"
+                },
+                {
+                    "date": 1730098425365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,11 @@\n \r\n const Tab = ({children, setPosition}) => {\r\n     const ref = useRef(null);\r\n     return (\r\n-        <li className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'>\r\n+        <li \r\n+        ref={ref}\r\n+        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'>\r\n             {children}\r\n         </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730098492704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,8 +31,12 @@\n     const ref = useRef(null);\r\n     return (\r\n         <li \r\n         ref={ref}\r\n+        onMouseEnter={()=>{\r\n+            if(!ref.current) return;\r\n+            const data = ref.current.getBoundingClientRect();\r\n+        }}\r\n         className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'>\r\n             {children}\r\n         </li>\r\n     )\r\n"
+                },
+                {
+                    "date": 1730098533211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,9 @@\n         <li \r\n         ref={ref}\r\n         onMouseEnter={()=>{\r\n             if(!ref.current) return;\r\n-            const data = ref.current.getBoundingClientRect();\r\n+            const {width} = ref.current.getBoundingClientRect();\r\n         }}\r\n         className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'>\r\n             {children}\r\n         </li>\r\n"
+                },
+                {
+                    "date": 1730098576631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,14 @@\n         ref={ref}\r\n         onMouseEnter={()=>{\r\n             if(!ref.current) return;\r\n             const {width} = ref.current.getBoundingClientRect();\r\n+\r\n+            setPosition({\r\n+                width,\r\n+                opacity: 1,\r\n+                left: 0\r\n+            })\r\n         }}\r\n         className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'>\r\n             {children}\r\n         </li>\r\n"
+                },
+                {
+                    "date": 1730098602478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n \r\n             setPosition({\r\n                 width,\r\n                 opacity: 1,\r\n-                left: 0\r\n+                left: ref.current.offsetLeft,\r\n             })\r\n         }}\r\n         className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'>\r\n             {children}\r\n"
+                },
+                {
+                    "date": 1730098703911,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,16 @@\n         opacity: 0,\r\n     });\r\n \r\n   return (\r\n-    <ul className='relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1'>\r\n+    <ul\r\n+    onMouseLeave={()=>{\r\n+        setPosition((pv)=> ({\r\n+            ...pv,\r\n+            opacity: 0\r\n+        }))\r\n+    }}\r\n+    className='relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1'>\r\n         <Tab setPosition={setPosition}>Home</Tab>\r\n         <Tab setPosition={setPosition}>Content</Tab>\r\n         <Tab setPosition={setPosition}>About</Tab>\r\n         <Tab setPosition={setPosition}>Contact</Tab>\r\n"
+                },
+                {
+                    "date": 1730098753423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import React, { useRef } from 'react'\r\n+import React, { useRef, useState } from 'react'\r\n import { motion } from \"framer-motion\"\r\n \r\n export const SlideTabsExample = () => {\r\n     return (\r\n@@ -20,9 +20,9 @@\n     <ul\r\n     onMouseLeave={()=>{\r\n         setPosition((pv)=> ({\r\n             ...pv,\r\n-            opacity: 0\r\n+            opacity: 0,\r\n         }))\r\n     }}\r\n     className='relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1'>\r\n         <Tab setPosition={setPosition}>Home</Tab>\r\n"
+                },
+                {
+                    "date": 1730099081742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { motion } from \"framer-motion\"\r\n \r\n export const SlideTabsExample = () => {\r\n     return (\r\n-        <div className='grid h-screen place-content-center bg-neutral-100'>\r\n+        <div className='grid h-screen bg-neutral-100'>\r\n             <SlideTabs />\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099092458,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { motion } from \"framer-motion\"\r\n \r\n export const SlideTabsExample = () => {\r\n     return (\r\n-        <div className='grid h-screen bg-neutral-100'>\r\n+        <div className='grid place-content-center bg-neutral-100'>\r\n             <SlideTabs />\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099103239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { motion } from \"framer-motion\"\r\n \r\n export const SlideTabsExample = () => {\r\n     return (\r\n-        <div className='grid place-content-center bg-neutral-100'>\r\n+        <div className='grid h-screen place-content-center bg-neutral-100'>\r\n             <SlideTabs />\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099111136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { motion } from \"framer-motion\"\r\n \r\n export const SlideTabsExample = () => {\r\n     return (\r\n-        <div className='grid h-screen place-content-center bg-neutral-100'>\r\n+        <div className='grid h-screen place-content-center bg-grey-100'>\r\n             <SlideTabs />\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099119609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { motion } from \"framer-motion\"\r\n \r\n export const SlideTabsExample = () => {\r\n     return (\r\n-        <div className='grid h-screen place-content-center bg-grey-100'>\r\n+        <div className='grid h-screen place-content-center bg-gray-300'>\r\n             <SlideTabs />\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099142824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { motion } from \"framer-motion\"\r\n \r\n export const SlideTabsExample = () => {\r\n     return (\r\n-        <div className='grid h-screen place-content-center bg-gray-300'>\r\n+        <div className='grid h-screen fixed place-content-center bg-gray-300'>\r\n             <SlideTabs />\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099150486,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { motion } from \"framer-motion\"\r\n \r\n export const SlideTabsExample = () => {\r\n     return (\r\n-        <div className='grid h-screen fixed place-content-center bg-gray-300'>\r\n+        <div className='grid h-screen place-content-center bg-gray-300'>\r\n             <SlideTabs />\r\n         </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099193007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,7 +56,7 @@\n }\r\n \r\n const Cursor = ({position}) => {\r\n     return (\r\n-      <motion.li animate={position} className='absolute z-0 h-7 rounded-full bg-black'/>\r\n+      <motion.li animate={position} className='absolute z-0 h-7 rounded-full bg-indigo-600'/>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099212900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,7 +56,7 @@\n }\r\n \r\n const Cursor = ({position}) => {\r\n     return (\r\n-      <motion.li animate={position} className='absolute z-0 h-7 rounded-full bg-indigo-600'/>\r\n+      <motion.li animate={position} className='absolute z-0 h-7 rounded-full bg-violet-700'/>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099250528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,7 +56,7 @@\n }\r\n \r\n const Cursor = ({position}) => {\r\n     return (\r\n-      <motion.li animate={position} className='absolute z-0 h-7 rounded-full bg-violet-700'/>\r\n+      <motion.li animate={position} className='absolute z-0 h-7 rounded-full bg-purple-600'/>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099263836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n                 opacity: 1,\r\n                 left: ref.current.offsetLeft,\r\n             })\r\n         }}\r\n-        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'>\r\n+        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white '>\r\n             {children}\r\n         </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099277855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n                 opacity: 1,\r\n                 left: ref.current.offsetLeft,\r\n             })\r\n         }}\r\n-        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white '>\r\n+        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-black '>\r\n             {children}\r\n         </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099286285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n                 opacity: 1,\r\n                 left: ref.current.offsetLeft,\r\n             })\r\n         }}\r\n-        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-black '>\r\n+        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'>\r\n             {children}\r\n         </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099299063,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n                 opacity: 1,\r\n                 left: ref.current.offsetLeft,\r\n             })\r\n         }}\r\n-        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference'>\r\n+        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference hover:text-white'>\r\n             {children}\r\n         </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099307636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n                 opacity: 1,\r\n                 left: ref.current.offsetLeft,\r\n             })\r\n         }}\r\n-        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference hover:text-white'>\r\n+        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white  hover:text-white'>\r\n             {children}\r\n         </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099317572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n                 opacity: 1,\r\n                 left: ref.current.offsetLeft,\r\n             })\r\n         }}\r\n-        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white  hover:text-white'>\r\n+        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-slate-500 hover:text-white'>\r\n             {children}\r\n         </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099325515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n                 opacity: 1,\r\n                 left: ref.current.offsetLeft,\r\n             })\r\n         }}\r\n-        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-slate-500 hover:text-white'>\r\n+        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-slate-800 hover:text-white'>\r\n             {children}\r\n         </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099340014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n                 opacity: 1,\r\n                 left: ref.current.offsetLeft,\r\n             })\r\n         }}\r\n-        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-slate-800 hover:text-white'>\r\n+        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase font-semibold text-slate-800 hover:text-white'>\r\n             {children}\r\n         </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099352196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n                 opacity: 1,\r\n                 left: ref.current.offsetLeft,\r\n             })\r\n         }}\r\n-        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase font-semibold text-slate-800 hover:text-white'>\r\n+        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase font-bold text-slate-800 hover:text-white'>\r\n             {children}\r\n         </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099489431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n                 opacity: 1,\r\n                 left: ref.current.offsetLeft,\r\n             })\r\n         }}\r\n-        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase font-bold text-slate-800 hover:text-white'>\r\n+        className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase font-semibold text-slate-800 hover:text-white'>\r\n             {children}\r\n         </li>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730099504065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             ...pv,\r\n             opacity: 0,\r\n         }))\r\n     }}\r\n-    className='relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1'>\r\n+    className='relative mx-auto flex w-fit rounded-full border-1 border-black bg-white p-1'>\r\n         <Tab setPosition={setPosition}>Home</Tab>\r\n         <Tab setPosition={setPosition}>Content</Tab>\r\n         <Tab setPosition={setPosition}>About</Tab>\r\n         <Tab setPosition={setPosition}>Contact</Tab>\r\n"
+                },
+                {
+                    "date": 1730099519361,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             ...pv,\r\n             opacity: 0,\r\n         }))\r\n     }}\r\n-    className='relative mx-auto flex w-fit rounded-full border-1 border-black bg-white p-1'>\r\n+    className='relative mx-auto flex w-fit rounded-full border-x-2 border-black bg-white p-1'>\r\n         <Tab setPosition={setPosition}>Home</Tab>\r\n         <Tab setPosition={setPosition}>Content</Tab>\r\n         <Tab setPosition={setPosition}>About</Tab>\r\n         <Tab setPosition={setPosition}>Contact</Tab>\r\n"
+                },
+                {
+                    "date": 1730099524658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             ...pv,\r\n             opacity: 0,\r\n         }))\r\n     }}\r\n-    className='relative mx-auto flex w-fit rounded-full border-x-2 border-black bg-white p-1'>\r\n+    className='relative mx-auto flex w-fit rounded-full border-y-2 border-black bg-white p-1'>\r\n         <Tab setPosition={setPosition}>Home</Tab>\r\n         <Tab setPosition={setPosition}>Content</Tab>\r\n         <Tab setPosition={setPosition}>About</Tab>\r\n         <Tab setPosition={setPosition}>Contact</Tab>\r\n"
+                },
+                {
+                    "date": 1730099537339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             ...pv,\r\n             opacity: 0,\r\n         }))\r\n     }}\r\n-    className='relative mx-auto flex w-fit rounded-full border-y-2 border-black bg-white p-1'>\r\n+    className='relative mx-auto flex w-fit rounded-full border-1.5 border-black bg-white p-1'>\r\n         <Tab setPosition={setPosition}>Home</Tab>\r\n         <Tab setPosition={setPosition}>Content</Tab>\r\n         <Tab setPosition={setPosition}>About</Tab>\r\n         <Tab setPosition={setPosition}>Contact</Tab>\r\n"
+                },
+                {
+                    "date": 1730099542574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             ...pv,\r\n             opacity: 0,\r\n         }))\r\n     }}\r\n-    className='relative mx-auto flex w-fit rounded-full border-1.5 border-black bg-white p-1'>\r\n+    className='relative mx-auto flex w-fit rounded-full border-1 border-black bg-white p-1'>\r\n         <Tab setPosition={setPosition}>Home</Tab>\r\n         <Tab setPosition={setPosition}>Content</Tab>\r\n         <Tab setPosition={setPosition}>About</Tab>\r\n         <Tab setPosition={setPosition}>Contact</Tab>\r\n"
+                },
+                {
+                    "date": 1730099554572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             ...pv,\r\n             opacity: 0,\r\n         }))\r\n     }}\r\n-    className='relative mx-auto flex w-fit rounded-full border-1 border-black bg-white p-1'>\r\n+    className='relative mx-auto flex w-fit rounded-full border-2 border-gray-400 bg-white p-1'>\r\n         <Tab setPosition={setPosition}>Home</Tab>\r\n         <Tab setPosition={setPosition}>Content</Tab>\r\n         <Tab setPosition={setPosition}>About</Tab>\r\n         <Tab setPosition={setPosition}>Contact</Tab>\r\n"
+                },
+                {
+                    "date": 1730099559760,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n             ...pv,\r\n             opacity: 0,\r\n         }))\r\n     }}\r\n-    className='relative mx-auto flex w-fit rounded-full border-2 border-gray-400 bg-white p-1'>\r\n+    className='relative mx-auto flex w-fit rounded-full border-2 border-gray-600 bg-white p-1'>\r\n         <Tab setPosition={setPosition}>Home</Tab>\r\n         <Tab setPosition={setPosition}>Content</Tab>\r\n         <Tab setPosition={setPosition}>About</Tab>\r\n         <Tab setPosition={setPosition}>Contact</Tab>\r\n"
+                },
+                {
+                    "date": 1730099578959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -56,7 +56,7 @@\n }\r\n \r\n const Cursor = ({position}) => {\r\n     return (\r\n-      <motion.li animate={position} className='absolute z-0 h-7 rounded-full bg-purple-600'/>\r\n+      <motion.li animate={position} className='absolute z-0 h-7 rounded-full bg-purple-800'/>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1730165430489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,72 @@\n+import React, { useRef, useState } from 'react';\r\n+import { motion } from 'framer-motion';\r\n+\r\n+export const SlideTabsExample = () => {\r\n+    return (\r\n+        <div className='grid h-screen place-content-center bg-gray-300'>\r\n+            <SlideTabs />\r\n+        </div>\r\n+    );\r\n+}\r\n+\r\n+const SlideTabs = () => {\r\n+    const [position, setPosition] = useState({\r\n+        left: 0,\r\n+        width: 0,\r\n+        opacity: 0,\r\n+    });\r\n+\r\n+    return (\r\n+        <ul\r\n+            onMouseLeave={() => {\r\n+                setPosition((pv) => ({\r\n+                    ...pv,\r\n+                    opacity: 0,\r\n+                }));\r\n+            }}\r\n+            className='relative mx-auto flex w-fit rounded-full border-2 border-gray-600 bg-white p-1'\r\n+        >\r\n+            <Tab setPosition={setPosition}>Home</Tab>\r\n+            <Tab setPosition={setPosition}>Content</Tab>\r\n+            <Tab setPosition={setPosition}>About</Tab>\r\n+            <Tab setPosition={setPosition}>Contact</Tab>\r\n+            <Cursor position={position} />\r\n+        </ul>\r\n+    );\r\n+}\r\n+\r\n+const Tab = ({ children, setPosition }) => {\r\n+    const ref = useRef(null);\r\n+    \r\n+    return (\r\n+        <li\r\n+            ref={ref}\r\n+            onMouseEnter={() => {\r\n+                if (!ref.current) return;\r\n+                const { width } = ref.current.getBoundingClientRect();\r\n+                setPosition({\r\n+                    width,\r\n+                    opacity: 1,\r\n+                    left: ref.current.offsetLeft,\r\n+                });\r\n+            }}\r\n+            className='relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase font-semibold text-slate-800 hover:text-white'\r\n+        >\r\n+            {children}\r\n+        </li>\r\n+    );\r\n+}\r\n+\r\n+const Cursor = ({ position }) => {\r\n+    return (\r\n+        <motion.li\r\n+            className='absolute z-0 h-7 rounded-full bg-purple-800'\r\n+            animate={{\r\n+                opacity: position.opacity,\r\n+                width: position.width,\r\n+                left: position.left,\r\n+            }}\r\n+            transition={{ duration: 0.3 }} // Anda bisa menyesuaikan durasi transisi\r\n+        />\r\n+    );\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1730096628802,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\n\r\nexport const SlideTabsExample = () => {\r\n    return (\r\n        <div className='grid h-screen place-content-center bg-neutral-100'>\r\n\r\n        </div>\r\n    )\r\n}\r\n\r\nconst SlideTabs = () => {\r\n  return (\r\n    <div>SlideTabs</div>\r\n  )\r\n}\r\n\r\nexport default SlideTabs"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "sourceFile": "tailwind.config.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1730078511316,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1730099434186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,13 @@\n     \"./index.html\",\n     \"./src/**/*.{js,ts,jsx,tsx}\",\n   ],\n   theme: {\n-    extend: {},\n+    extend: {\n+      fontFamily: {\n+        poppins: [\"Poppins\"],\n+      },\n+    },\n   },\n   plugins: [],\n }\n \n"
+                }
+            ],
+            "date": 1730078511316,
+            "name": "Commit-0",
+            "content": "/** @type {import('tailwindcss').Config} */\nexport default {\n  content: [\n    \"./index.html\",\n    \"./src/**/*.{js,ts,jsx,tsx}\",\n  ],\n  theme: {\n    extend: {},\n  },\n  plugins: [],\n}\n\n"
+        }
+    ]
+}

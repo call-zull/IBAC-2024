@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/main.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1730078946602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1730078984959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,9 @@\n import { BrowserRouter } from 'react-router-dom'\n \n createRoot(document.getElementById('root')).render(\n   <StrictMode>\n+    <BrowserRouter>\n     <App />\n+    </BrowserRouter>\n   </StrictMode>,\n )\n"
+                }
+            ],
+            "date": 1730078946602,
+            "name": "Commit-0",
+            "content": "import { StrictMode } from 'react'\nimport { createRoot } from 'react-dom/client'\nimport './index.css'\nimport App from './App.jsx'\n\nimport { BrowserRouter } from 'react-router-dom'\n\ncreateRoot(document.getElementById('root')).render(\n  <StrictMode>\n    <App />\n  </StrictMode>,\n)\n"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/components/Home.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1730155849257,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1730156051364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,23 @@\n import React from 'react';\r\n-import Comments from './Comments'; // Ganti dengan jalur yang benar jika perlu\r\n+import { DiscussionEmbed } from 'disqus-react';\r\n \r\n-function Home() {\r\n-  const postIdentifier = \"home\"; // Identifier untuk halaman home\r\n-  const postTitle = \"Judul Halaman Home\"; // Judul halaman home\r\n+const Home = () => {\r\n+  const disqusShortname = 'novan-disqus'; // Ganti dengan shortname kamu\r\n+  const disqusConfig = {\r\n+    url: 'https://novanjunaedi.com/', // URL halaman home\r\n+    identifier: 'home', // Identifier tetap untuk halaman home\r\n+    title: 'Judul Halaman Home', // Judul halaman home\r\n+  };\r\n \r\n   return (\r\n-    <div>\r\n-      <h1>Selamat Datang di Halaman Home</h1>\r\n-      {/* Konten halaman home */}\r\n-      <Comments postIdentifier={postIdentifier} postTitle={postTitle} />\r\n-    </div>\r\n+    <>\r\n+      <h1 className=\"title\">Selamat Datang di Halaman Home</h1>\r\n+      <p>Konten halaman utama akan ditampilkan di sini.</p>\r\n+\r\n+      {/* Pasang Disqus Component di bawah konten */}\r\n+      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />\r\n+    </>\r\n   );\r\n-}\r\n+};\r\n \r\n export default Home;\r\n"
+                },
+                {
+                    "date": 1730156066245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import React from 'react';\r\n import { DiscussionEmbed } from 'disqus-react';\r\n \r\n const Home = () => {\r\n-  const disqusShortname = 'novan-disqus'; // Ganti dengan shortname kamu\r\n+  const disqusShortname = 'web-design-6'; // Ganti dengan shortname kamu\r\n   const disqusConfig = {\r\n     url: 'https://novanjunaedi.com/', // URL halaman home\r\n     identifier: 'home', // Identifier tetap untuk halaman home\r\n     title: 'Judul Halaman Home', // Judul halaman home\r\n"
+                },
+                {
+                    "date": 1730156081265,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n const Home = () => {\r\n   const disqusShortname = 'web-design-6'; // Ganti dengan shortname kamu\r\n   const disqusConfig = {\r\n-    url: 'https://novanjunaedi.com/', // URL halaman home\r\n+    url: 'http://localhost:5173/', // URL halaman home\r\n     identifier: 'home', // Identifier tetap untuk halaman home\r\n     title: 'Judul Halaman Home', // Judul halaman home\r\n   };\r\n \r\n"
+                },
+                {
+                    "date": 1730157039336,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,23 +0,0 @@\n-import React from 'react';\r\n-import { DiscussionEmbed } from 'disqus-react';\r\n-\r\n-const Home = () => {\r\n-  const disqusShortname = 'web-design-6'; // Ganti dengan shortname kamu\r\n-  const disqusConfig = {\r\n-    url: 'http://localhost:5173/', // URL halaman home\r\n-    identifier: 'home', // Identifier tetap untuk halaman home\r\n-    title: 'Judul Halaman Home', // Judul halaman home\r\n-  };\r\n-\r\n-  return (\r\n-    <>\r\n-      <h1 className=\"title\">Selamat Datang di Halaman Home</h1>\r\n-      <p>Konten halaman utama akan ditampilkan di sini.</p>\r\n-\r\n-      {/* Pasang Disqus Component di bawah konten */}\r\n-      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />\r\n-    </>\r\n-  );\r\n-};\r\n-\r\n-export default Home;\r\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1730157053485,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,23 @@\n-\n+import React from 'react';\r\n+import { DiscussionEmbed } from 'disqus-react';\r\n+\r\n+const Home = () => {\r\n+  const disqusShortname = 'web-design-6'; // Ganti dengan shortname kamu\r\n+  const disqusConfig = {\r\n+    url: 'http://localhost:5173/', // URL halaman home\r\n+    identifier: 'home', // Identifier tetap untuk halaman home\r\n+    title: 'Judul Halaman Home', // Judul halaman home\r\n+  };\r\n+\r\n+  return (\r\n+    <>\r\n+      <h1 className=\"title\">Selamat Datang di Halaman Home</h1>\r\n+      <p>Konten halaman utama akan ditampilkan di sini.</p>\r\n+\r\n+      {/* Pasang Disqus Component di bawah konten */}\r\n+      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />\r\n+    </>\r\n+  );\r\n+};\r\n+\r\n+export default Home;\r\n"
+                }
+            ],
+            "date": 1730155849257,
+            "name": "Commit-0",
+            "content": "import React from 'react';\r\nimport Comments from './Comments'; // Ganti dengan jalur yang benar jika perlu\r\n\r\nfunction Home() {\r\n  const postIdentifier = \"home\"; // Identifier untuk halaman home\r\n  const postTitle = \"Judul Halaman Home\"; // Judul halaman home\r\n\r\n  return (\r\n    <div>\r\n      <h1>Selamat Datang di Halaman Home</h1>\r\n      {/* Konten halaman home */}\r\n      <Comments postIdentifier={postIdentifier} postTitle={postTitle} />\r\n    </div>\r\n  );\r\n}\r\n\r\nexport default Home;\r\n"
+        }
+    ]
+}
